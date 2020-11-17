@@ -56,7 +56,6 @@ hypixel==0.7.9
 owoify==0.3.1
 pymongo==3.11.0
 dnspython
-discord.py==0.16.12
 asyncio
 flask==1.1.2
 authlib==0.14.1
