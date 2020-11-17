@@ -47,4 +47,4 @@ async def div(ctx, left: int, right: int):
     """Adds two numbers together."""
     await ctx.send(left / right)
 
-bot.run('Nzc1NzYxNjc0MzE2NTQ2MDU4.X6rCXA.rwmgdqqU3U3wsz2uwOf36eIQ8zY')
+bot.run(os.environ('TOKEN')
