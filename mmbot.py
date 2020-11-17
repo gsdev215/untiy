@@ -2,7 +2,7 @@ import discord
 from itertools import cycle
 from discord.ext import commands, tasks
 import random
-
+import os
 bot = commands.Bot(command_prefix=('.'))
 
 status = cycle(['My Prefix is .', 'Originally I was developed by Dev','My developers username with tag is gs.dev#4082', 'Don\'t try to mess withme and my code','DM me for help | no! don`t dm '])
