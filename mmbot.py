@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 from itertools import cycle
 from discord.ext import commands, tasks
 import random
+import time
 import os
 
 load_dotenv()
@@ -23,9 +24,9 @@ async def change_status():
     await bot.change_presence(activity = discord.Game(next(status)))
     
 @bot.command()
-async def Ping(ctx):
+async def ping(ctx):
     before = time.monotonic()
-    before_ws = int(round(self.bot.latency * 1000, 1))
+    before_ws = int(round(bot.latency * 1000, 1))
     message = await ctx.send("🏓 Pong")
     ping = (time.monotonic() - before) * 1000
     await message.edit(content=f"🏓 WS: {before_ws}ms  |  REST: {int(ping)}ms")
