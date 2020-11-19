@@ -1,0 +1,14 @@
+{
+  "token": "Nzc1NzYxNjc0MzE2NTQ2MDU4.X6rCXA.WnpPMprnuQLhC9aZR6co9zUWSlM",
+  "join_message": "I has joined to do stuff 🌟",
+  "owners": [
+    707876147324518440,558311178972037127
+  ],
+  "prefix": [
+    "."
+  ],
+  "activity": "games!",
+  "activity_type": "playing|watching|listening|competing",
+  "status_type": "online|idle|dnd",
+  "version": "2.0.2"
+}
