@@ -59,13 +59,6 @@ async def on_member_remove(member):
     await channel.send(embed=embed)
 
 @bot.command()
-async def FAQ_1 (member):
-    embed=discord.Embed(title=&quot;FAQ 1&quot;, color=0x0666fd) 
-    embed.add_field(name=&quot;What is croosplay server. what hell it is? ans. hold up . croosplay sever is a server where java and bedrock player can play together in the same server. understood!&quot;, value=&quot;undefined&quot;, inline=True) 
-    embed.set_footer(text=&quot;-------------------------------------------------------------------------------------------------------------&quot;) 
-    await member.send(embed=embed)
-
-@bot.command()
 async def help (member):
     embed=discord.Embed(title="HELP", description="here are the commands that i can execute right at this moment. ", color=0x0666fd)
     embed.add_field(name=".help", value="the command you must just now", inline=True)
