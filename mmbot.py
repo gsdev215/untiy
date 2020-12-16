@@ -31,6 +31,13 @@ async def ping(ctx):
     ping = (time.monotonic() - before) * 1000
     await message.edit(content=f"🏓 WS: {before_ws}ms  |  REST: {int(ping)}ms")
 
+@bot.command()
+@commands.has_permissions(manage_roles=True)
+async def addrole(ctx):
+    user = ctx.message.author
+    role = discord.utils.get(user.server.roles, name="Test")
+    await client.add_roles(user, role)
+
 for file in os.listdir("cogs"):
     if file.endswith(".py"):
         name = file[:-3]
