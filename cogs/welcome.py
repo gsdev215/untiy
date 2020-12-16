@@ -5,6 +5,9 @@ bot=discord.Client(intents=intents)
 welcomechannel = await client.fetch_channel(channel_id) # https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID
 # Make sure you get the ID of your channel by right-clicking it and clicking `Copy ID`. Make sure developer mode is on!
 
+with open('config.json', 'r') as f:
+    config = json.load(f)
+
 @bot.event
 async def on_member_join(member):
     print("Recognised that a member called " + member.name + " joined")
