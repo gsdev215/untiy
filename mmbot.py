@@ -35,8 +35,8 @@ async def ping(ctx):
 
 @bot.command()
 @commands.has_permissions(manage_roles=True)
-async def addrole(ctx):
-    user = ctx.message.author
+async def addrole(member):
+    user = member.message.author
     role = discord.utils.get(user.server.roles, name="Test")
     await client.add_roles(user, role)
 
@@ -59,14 +59,14 @@ async def on_member_remove(member):
     await channel.send(embed=embed)
 
 @bot.command()
-async def FAQ_1 (ctx):
+async def FAQ_1 (member):
     embed=discord.Embed(title=&quot;FAQ 1&quot;, color=0x0666fd) 
     embed.add_field(name=&quot;What is croosplay server. what hell it is? ans. hold up . croosplay sever is a server where java and bedrock player can play together in the same server. understood!&quot;, value=&quot;undefined&quot;, inline=True) 
     embed.set_footer(text=&quot;-------------------------------------------------------------------------------------------------------------&quot;) 
-    await ctx.send(embed=embed)
+    await member.send(embed=embed)
 
 @bot.command()
-async def help (ctx):
+async def help (member):
     embed=discord.Embed(title="HELP", description="here are the commands that i can execute right at this moment. ", color=0x0666fd)
     embed.add_field(name=".help", value="the command you must just now", inline=True)
     embed.add_field(name=".math", value="now you can slove your math problem.  just type .math (value1)(operation :- , - , + , * , **, /,^) (value2)", inline=True)
@@ -76,7 +76,7 @@ async def help (ctx):
     embed.add_field(name=".server avatar", value="full zoomed server icon", inline=True)
     embed.add_field(name=".joindat /.joindat (tag a person)", value="show that person join date both discord and this server.", inline=True)
     embed.set_footer(text="bot by :- gs.dev#0428")
-    await ctx.send(embed=embed)
+    await member.send(embed=embed)
 
 for file in os.listdir("cogs"):
     if file.endswith(".py"):
