@@ -58,6 +58,13 @@ async def on_member_remove(member):
     await member.send(embed=embed)
     await channel.send(embed=embed)
 
+@bot.command()
+async def FAQ_1 (ctx):<br>
+    embed=discord.Embed(title=&quot;FAQ 1&quot;, color=0x0666fd) 
+    embed.add_field(name=&quot;What is croosplay server. what hell it is? ans. hold up . croosplay sever is a server where java and bedrock player can play together in the same server. understood!&quot;, value=&quot;undefined&quot;, inline=True) 
+    embed.set_footer(text=&quot;-------------------------------------------------------------------------------------------------------------&quot;) 
+    await ctx.send(embed=embed)
+
 for file in os.listdir("cogs"):
     if file.endswith(".py"):
         name = file[:-3]
