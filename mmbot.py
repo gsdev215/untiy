@@ -42,7 +42,7 @@ async def addrole(ctx):
 
 @bot.event
 async def on_member_join(member):
-    channel = bot.get_channel(768690733673611284)
+    channel = bot.get_channel(788709479897104384)
     embed = discord.Embed(title="Welcome :-", description="Thank you for kindly joining our server", color=0x00ff00)
     embed.set_author(name=member.name, icon_url=member.avatar_url)
     embed.add_field(name="IP" , value="play.unitypixel.net", inline=True) 
@@ -52,7 +52,7 @@ async def on_member_join(member):
 
 @bot.event
 async def on_member_remove(member):
-    channel = bot.get_channel(731906813720789022)
+    channel = bot.get_channel(788709479897104384)
     embed = discord.Embed(title="Good Bye :-", description="Thank you for being with us hope to see you soon.", color=0x00ff00)
     embed.set_author(name=member.name, icon_url=member.avatar_url)
     await member.send(embed=embed)
