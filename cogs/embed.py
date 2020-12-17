@@ -6,7 +6,7 @@ import random
 import time
 import os
 
-class Discord_Info(commands.Cog):
+class command(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         self.config = default.get("config.json")
@@ -19,3 +19,6 @@ async def say (ctx, arg):
 async def slap(ctx, members: commands.Greedy[discord.Member], *, reason='no reason'):
     slapped = ", ".join(x.name for x in members)
     await ctx.send('{} just got slapped for {}'.format(slapped, reason))
+
+def setup(bot):
+	bot.add_cog(command(bot))
