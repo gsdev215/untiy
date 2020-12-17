@@ -24,6 +24,5 @@ async def say (ctx, arg):
 async def slap(ctx, member: discord.Member, *, reason=''):
     await ctx.send(f'{member.name} just got slapped from {ctx.author.name} for {reason}') 
  
-
 def setup(bot):
 	bot.add_cog(command(bot))
