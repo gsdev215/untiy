@@ -1,4 +1,7 @@
 import discord
+
+from io import BytesIO
+from utils import default
 from dotenv import load_dotenv
 from itertools import cycle
 from discord.ext import commands
