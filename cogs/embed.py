@@ -5,12 +5,11 @@ from discord.ext import commands
 import random
 import time
 import os
-from mmbot import bot
 
-
-class Fun(commands.Cog):
-	def __init__(self,bot):
-		self.bot = bot
+class Discord_Info(commands.Cog):
+    def __init__(self, bot):
+        self.bot = bot
+        self.config = default.get("config.json")
 
 @commands.command()
 async def say (ctx, arg):
