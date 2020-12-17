@@ -71,6 +71,14 @@ async def help (member):
     embed.set_footer(text="bot by :- gs.dev#0428")
     await member.send(embed=embed)
 
+@bot.command()
+async def ip (ctx):
+    embed=discord.Embed(title="IP", color=0x2cdedb)
+    embed.add_field(name="JAVA IP", value="play.unitypixel.net", inline=False)
+    embed.add_field(name="Bedrock IP", value="play.unitypixel.net", inline=True)
+    embed.add_field(name="port", value="19132", inline=True)
+    await ctx.send(embed=embed)
+
 for file in os.listdir("cogs"):
     if file.endswith(".py"):
         name = file[:-3]
