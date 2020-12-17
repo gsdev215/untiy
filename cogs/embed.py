@@ -15,10 +15,12 @@ class command(commands.Cog):
         self.config = default.get("config.json")
 
 @commands.command()
+@commands.guild_only()
 async def say (ctx, arg):
     await ctx.send(arg)
 
 @commands.command()
+@commands.guild_only()
 async def slap(ctx, members: commands.Greedy[discord.Member], *, reason='no reason'):
     slapped = ", ".join(x.name for x in members)
     await ctx.send('{} just got slapped for {}'.format(slapped, reason))
