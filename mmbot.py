@@ -79,11 +79,6 @@ async def ip (ctx):
     embed.add_field(name="port", value="19132", inline=True)
     await ctx.send(embed=embed)
 
-@bot.command()
-async def say (ctx, arg):
-    await ctx.send(arg)
-
- 
 for file in os.listdir("cogs"):
     if file.endswith(".py"):
         name = file[:-3]
