@@ -82,12 +82,7 @@ async def ip (ctx):
 @bot.command()
 async def say (ctx, arg):
     await ctx.send(arg)
-
-@bot.command()
-async def slap(ctx, member: discord.Member, *, reason=''):
-    await ctx.send(f'{member.name} just got slapped from {ctx.author.name} for {reason}') 
  
-
 for file in os.listdir("cogs"):
     if file.endswith(".py"):
         name = file[:-3]
