@@ -82,6 +82,7 @@ async def ip (ctx):
 @bot.command()
 async def say (ctx, arg):
     await ctx.send(arg)
+
  
 for file in os.listdir("cogs"):
     if file.endswith(".py"):
