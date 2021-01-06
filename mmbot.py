@@ -20,7 +20,7 @@ status = cycle(['My Prefix is .', 'Originally I was developed by Dev','My develo
 @bot.event 
 async def on_ready():
 	change_status.start()
-	print(f'Logged in as {bot.user.name}')
+	print(f"Logged in as {bot.user.name}")
 	
 	
 @tasks.loop(seconds=20)
@@ -28,14 +28,14 @@ async def change_status():
     await bot.change_presence(activity = discord.Game(next(status)))
     
 @bot.command()
-async def load(ctx , extension):
-	bot.load_extension(f'cogs.(extension)')
-	await ctx.send('loading all cogs\'s classes')
+async def load(ctx,extension):
+	bot.load_extension(f"cogs.(extension)")
+	await ctx.send(f"loading all cogs\'s classes")
 
 @bot.command()
-async def unload(ctx , extension):
-	bot.unload_extension(f'cogs.(extension)')
-	await ctx.send('unloading all cogs\'s classes')
+async def unload(ctx,extension):
+	bot.unload_extension(f"cogs.(extension)")
+	await ctx.send(f"unloading all cogs\'s classes")
 
 @bot.command()
 async def ping(ctx):
@@ -91,9 +91,9 @@ async def ip (ctx):
     embed.add_field(name="port", value="19132", inline=True)
     await ctx.send(embed=embed)
 
-for file in os.listdir("cogs"):
-    if file.endswith(".py"):
-        name = file[:-3]
+for filename in os.listdir("./cogs"):
+    if filename.endswith(".py"):
+        name = filename[:-3]
         bot.load_extension(f"cogs.{name}")
 
 bot.run(os.getenv('TOKEN'))
