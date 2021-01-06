@@ -27,15 +27,22 @@ async def on_ready():
 async def change_status():
     await bot.change_presence(activity = discord.Game(next(status)))
     
-@bot.command()
-async def load(ctx,extension):
-	bot.load_extension(f"cogs.(extension)")
-	await ctx.send(f"loading all cogs\'s classes")
 
 @bot.command()
-async def unload(ctx,extension):
-	bot.unload_extension(f"cogs.(extension)")
-	await ctx.send(f"unloading all cogs\'s classes")
+async def load(extension_name : str):
+    """Loads an extension."""
+    try:
+        bot.load_extension(extension_name)
+    except (AttributeError, ImportError) as e:
+        await bot.say("```py\n{}: {}\n```".format(type(e).__name__, str(e)))
+        return
+    await bot.say("{} loaded.".format(extension_name))
+
+@bot.command()
+async def unload(extension_name : str):
+    """Unloads an extension."""
+    bot.unload_extension(extension_name)
+    await bot.say("{} unloaded.".format(extension_name))
 
 @bot.command()
 async def ping(ctx):
