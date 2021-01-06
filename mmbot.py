@@ -11,7 +11,7 @@ load_dotenv()
 intents = discord.Intents.all()
 
 bot = commands.Bot(command_prefix=('.'), intents=intents)
-bot.remove_command('help')
+#bot.remove_command('help')
 
 
 
@@ -70,7 +70,7 @@ async def on_member_remove(member):
     await member.send(embed=embed)
     await channel.send(embed=embed)
 
-@bot.command()
+'''@bot.command()
 async def help (member):
     embed=discord.Embed(title="HELP", description="here are the commands that i can execute right at this moment. ", color=0x0666fd)
     embed.add_field(name=".help", value="the command you must just now", inline=True)
@@ -81,7 +81,7 @@ async def help (member):
     embed.add_field(name=".server avatar", value="full zoomed server icon", inline=True)
     embed.add_field(name=".joindat /.joindat (tag a person)", value="show that person join date both discord and this server.", inline=True)
     embed.set_footer(text="bot by :- gs.dev#0428")
-    await member.send(embed=embed)
+    await member.send(embed=embed)'''
 
 @bot.command()
 async def ip (ctx):
