@@ -13,6 +13,16 @@ intents = discord.Intents.all()
 bot = commands.Bot(command_prefix=('.'), intents=intents)
 bot.remove_command('help')
 
+@bot.commands()
+async def load(ctx , extension):
+	bot.load_extension(f'cogs.(extension)')
+	await ctx.send('loading all cogs\'s classes')
+
+@bot.commands()
+async def unload(ctx , extension):
+	bot.unload_extension(f'cogs.(extension)')
+	await ctx.send('unloading all cogs\'s classes')
+
 status = cycle(['My Prefix is .', 'Originally I was developed by Dev','My developers username with tag is gs.dev#4082', 'Don\'t try to mess withme and my code','DM me for help | no! don`t dm '])
 
 @bot.event 
