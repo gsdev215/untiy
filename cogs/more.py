@@ -8,7 +8,7 @@ class more(commands.Cog):
 		self.bot = bot
 
 @commands.command()
-async def mtest(self , ctx)
+async def mtest(self,ctx)
 	await ctx.send('is loaded')
 
 def setup(bot):
