@@ -32,7 +32,7 @@ async def create_channel(author):
 	member = await guild.fetch_member(author.id)
 	await temp_channel.send("@here Someone wants help.")
 	await temp_channel.send(f"**Username:** {author.name}#{author.discriminator} \n**Account Created:** {author.created_at}\n**Joined on:** {member.joined_at}\n**User Id:** {author.id}")
-	await temp_channel.send("---------------------------------")
+	await temp_channel.send(f"---------------------------------")
 	return temp_channel
 
 class Modmail(commands.Cog):
