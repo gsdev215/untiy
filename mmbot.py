@@ -43,9 +43,9 @@ async def unload(ctx, extension_name : str):
     """Unloads an extension."""
     bot.unload_extension(extension_name)
     await ctx.send("{} unloaded.".format(extension_name))'''
-@bot.commands ()
+'''@bot.commands ()
  async def reload(extension):
-       bot.reload_extension('more')
+       bot.reload_extension('more')'''
 
 @bot.command()
 async def ping(ctx):
