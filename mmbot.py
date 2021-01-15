@@ -104,7 +104,7 @@ async def ip (ctx):
 @bot.commamd()
 async def ping(ctx,say:str):
         while True :
-		await ctx.send(say)
+	    await ctx.send(say)
 
 
 for filename in os.listdir("./cogs"):
