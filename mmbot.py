@@ -101,10 +101,10 @@ async def ip (ctx):
     embed.add_field(name="port", value="19132", inline=True)
     await ctx.send(embed=embed)
 
-@bot.commamd()
-async def ping(ctx,say:str):
-        while True :
-	    await ctx.send(say)
+@bot.command()
+async def say(ctx,say:str):
+	while True :
+		await ctx.send(say)
 
 
 for filename in os.listdir("./cogs"):
